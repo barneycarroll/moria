@@ -59,7 +59,7 @@ var redirect = ( function redirectScope(){
 	return function redirect( from, to ){
 		if( !absolute.test( to ) ){
 			while( ascend.test( to ) ){
-				to.replace( ascend. empty );
+				to.replace( ascend, empty );
 
 				from = from.replace( tail, empty );
 			}
