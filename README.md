@@ -1,7 +1,7 @@
 moria
 =====
 
-A routing system for [Mithril](http://lhorie.github.io/mithril/).
+<a name=origin_version></a>A routing system for [Mithril v0.X](http://lhorie.github.io/mithril/)[*](#footnote_version).
 
 Mithril has a beautiful lightweight routing paradigm, but as [legends recount](http://en.wikipedia.org/wiki/Durin), sometimes you need to [dig deep](http://en.wikipedia.org/wiki/Moria_(Middle-earth)) to get at the good bits: it's difficult to express the routing of a complex application when [m.route( rootElement, defaultRoute, routesHash )](http://lhorie.github.io/mithril/mithril.route.html#defining-routes) can only be invoked once and the routes hash has to be flat.
 
@@ -9,21 +9,17 @@ Moria aims to solve these problems by producing a Mithril-compatible route hash 
 
 # Features
 
-* Nested routes
-* Setup functions to run when a route is matched
-* Redirects
-
-# Roadmap
-
-* Nested modules (currently, each route endpointmust specify the complete module structure you want to render)
-* ...
+* Hierarchical route structures
+* Route match functions
+* Declarative redirects
 
 # Install
-
-Currently only works as a CommonJS module, and therefore requires Node (and npm if you want command-line installation). I use [browserify](http://browserify.org/) to compile my CommonJS JavaScript for use on the front-end.
-
 ```
 npm install --save moria
+```
+
+```html
+<script src=https://unpkg.com/moria></script>
 ```
 
 # Use
@@ -66,3 +62,7 @@ var routeHash = moria( {
 
 m.route( document.body, '/', routeHash );
 ```
+
+***
+
+<a name=footnote_version></a>* Moria's last functional release was contemporaneous with Mithril v0.1.22, but it should work with any version below v1. It will not work with Mithril v1. Mithril v1 features a new component model which overlaps with Moria in an incompatible way & introduces semantic ambiguities into the routing model (Route Components vs Route Resolvers) which make routing plugins like Moria difficult to apply consistently. [↩︎](#origin_version)

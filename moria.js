@@ -1,12 +1,15 @@
 'use strict';
 
-var _ = require( 'lodash' );
-var m = require( 'mithril' );
+try {
+	var _ = require( 'lodash' );
+	var m = require( 'mithril' );
+	module.exports = buildRouteHash
+} catch(eh){}
 
 var empty = '';
 var slash = '/';
 
-module.exports = function buildRouteHash( routeMap ){
+function buildRouteHash( routeMap ){
 	var hash = {};
 
 	void function buildRouteLevel( routeMap, tail, before ){
