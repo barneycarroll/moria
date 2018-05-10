@@ -1,28 +1,37 @@
 {
   "name": "moria",
-  "version": "1.0.0",
-  "description": "A routing system for Mithril",
-  "main": "moria.js",
+  "version": "2.0.0-alpha.1",
+  "description": "A Router component for Mithril in the vein of react-router, using universal-router & history",
+  "main": "src/Router.js",
   "scripts": {
+    "dev": "http-server",
+    "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/barneycarroll/moria.git"
+    "url": "git+https://github.com/barneycarroll/moria.git"
   },
   "keywords": [
     "mithril",
     "router",
-    "routing"
+    "component"
   ],
-  "author": "barney.carroll@gmail.com",
+  "author": "Barney Carroll <barney.carroll@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/barneycarroll/moria/issues"
+    "url": "https://github.com/barneycarroll/mithril-router/issues"
   },
-  "homepage": "https://github.com/barneycarroll/moria",
-  "dependencies": {
-    "lodash": "^2.4.1",
-    "mithril": "^0.1.22"
+  "homepage": "https://github.com/barneycarroll/mithril-router#readme",
+  "devDependencies": {
+    "history": "^4.7.2",
+    "http-server": "^0.11.1",
+    "mithril": "^1.1.6",
+    "universal-router": "^6.0.0"
+  },
+  "peerDependencies": {
+    "history": "^4.7.2",
+    "mithril": "^1.1.6",
+    "universal-router": "^6.0.0"
   }
 }
